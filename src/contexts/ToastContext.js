@@ -10,11 +10,9 @@ const initialState = {
 };
 
 export const ToastContextProvider = ({children}) => {
-    const [state, dispatch] = useReducer(toastReducer, initialState);   
-    console.log('state position : ', state.position)
+    const [state, dispatch] = useReducer(toastReducer, initialState);       
     const addToast = (type, message)=>{
-        const id = Math.floor(Math.random() *1000000);
-        console.log('type : ', type)
+        const id = Math.floor(Math.random() *1000000);        
         dispatch({
             type: "ADD_TOAST",
             payload: {
