@@ -24,6 +24,11 @@ const Toast = ({ message, type, id }) => {
   const timerId = useRef(null);
   const icon = types[type];
 
+  const handleDismiss = ()=> {
+    setDismissed(true);
+    toast.remove(id);
+  }
+
   useEffect(()=>{
     timerId.current = setTimeout(()=>{
       handleDismiss();
@@ -32,13 +37,10 @@ const Toast = ({ message, type, id }) => {
     return () => {
       clearTimeout(timerId.current)
     }
-  },[])
+  })
 
  
-  const handleDismiss = ()=> {
-    setDismissed(true);
-    toast.remove(id);
-  }
+ 
   return (
    <div 
    className={`flex gap-2 align-middle justify-between h-14 p-2 pt-4 shadow-lg rounded-md toast ${dismissed?'toast-dismissed':''}`}
