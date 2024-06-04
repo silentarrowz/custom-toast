@@ -21,7 +21,7 @@ function Home(){
                  onChange={(e)=>changePosition(e.target.value)}
                  >
                     <option value="top-right">Top-Right</option>
-                    <option value="top-left">Top-Left</option>
+                    <option value="top-left">Top-Left</option>                    
                     <option value="bottom-right">Bottom-Right</option>
                     <option value="bottom-left">Bottom-Left</option>
                  </select>
