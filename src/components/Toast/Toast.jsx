@@ -57,12 +57,13 @@ const Toast = ({ message, type, id }) => {
 Toast.defaultProps = {
   type: "success",
   message: "Add a meaningful toast message here.",
+  id:2342
 };
 
 Toast.propTypes = {
   type: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Toast;
