@@ -35,7 +35,7 @@ const Toast = ({ message, type, id }) => {
     }
   },[])
 
-  // const toastIcon = iconMap[type] || null;
+ 
   const handleDismiss = ()=> {
     setDismissed(true);
     toast.remove(id);
