@@ -1,10 +1,9 @@
-import { Button, Checkbox, DatePicker, Form, Input } from 'antd';
+import { Button } from 'antd';
 import { useToast } from './hooks/useToast';
 import { useEffect } from 'react';
 
 function Home(){
-    const toast = useToast();
-    console.log('toast home : ', toast);
+    const toast = useToast();   
 
     const changePosition = (position) => {
         toast.setPosition(position)
@@ -18,13 +17,13 @@ function Home(){
             <Button className='bg-[#add8e6]' onClick={()=>{toast.info("Info toast notification")}}>info</Button>
 
             <div>
-                <select className='w-1/2'
+                <select className='w-full'
                  onChange={(e)=>changePosition(e.target.value)}
                  >
-                    <option value="top-left">Top-Left</option>
                     <option value="top-right">Top-Right</option>
-                    <option value="bottom-left">Bottom-Left</option>
+                    <option value="top-left">Top-Left</option>
                     <option value="bottom-right">Bottom-Right</option>
+                    <option value="bottom-left">Bottom-Left</option>
                  </select>
             </div>
         </div>
