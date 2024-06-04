@@ -1,8 +1,7 @@
 import Toast from '../Toast/Toast';
 import container from './container.css';
 
-const ToastContainer = ({toasts, position}) => {
-    console.log('toasts : ', toasts);
+const ToastContainer = ({toasts, position}) => {    
 
     const getPositionClass = (position) => {
         switch(position){
@@ -10,6 +9,7 @@ const ToastContainer = ({toasts, position}) => {
             case 'top-right': return 'top-0 right-0';
             case 'bottom-left': return 'bottom-0 left-0';
             case 'bottom-right': return 'bottom-0 right-0'
+            default: return 'top-0 right-0';
         }
     } 
     return (
