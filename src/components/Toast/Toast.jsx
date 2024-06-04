@@ -19,8 +19,7 @@ const types = {
 };
 
 const Toast = ({ message, type, id }) => {
-  const [dismissed, setDismissed] = useState(false);
-  console.log('type in toast : ', type)
+  const [dismissed, setDismissed] = useState(false);  
   const toast = useToast();
   const timerId = useRef(null);
   const icon = types[type];
